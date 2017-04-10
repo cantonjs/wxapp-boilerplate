@@ -1,5 +1,5 @@
 
-// import { flow } from 'lodash';
+import { flow } from 'lodash';
 
 // const delay = (t = 0) => new Promise((resolve) => setTimeout(resolve, t));
 
@@ -21,11 +21,11 @@ Page({
 
 		// await delay();
 
-		// const log = flow(() => {
-		// 	console.log('onLoad');
-		// });
+		const log = flow(() => {
+			console.log('onLoad');
+		});
 
-		// log();
+		log();
 
 		//调用应用实例的方法获取全局数据
 		app.getUserInfo((userInfo) => {

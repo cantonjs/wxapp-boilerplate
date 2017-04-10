@@ -1,4 +1,6 @@
-/**index.wxss**/
+
+$r: 120rpx;
+
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -6,8 +8,8 @@
 }
 
 .userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
+  width: $r;
+  height: $r;
   margin: 20rpx;
   border-radius: 50%;
 }

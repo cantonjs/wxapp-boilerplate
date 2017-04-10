@@ -23,6 +23,8 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-react": "5.0",
     "file-loader": "^0.11.1",
+    "node-sass": "^4.5.2",
+    "sass-loader": "^6.0.3",
     "webpack": "^2.3.2",
     "webpack-sources": "^0.2.3",
     "wxapp-webpack-plugin": "^0.0.0-4"

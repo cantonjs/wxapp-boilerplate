@@ -26,6 +26,22 @@ export default {
 					name: '[name].[ext]',
 				}
 			},
+			{
+				test: /\.scss$/,
+				include: /src/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							useRelativePath: true,
+							name: '[name].wxss',
+						}
+					},
+					{
+						loader: 'sass-loader',
+					},
+				],
+			},
 		],
 	},
 	plugins: [
@@ -35,7 +51,6 @@ export default {
 	resolve: {
 		modules: ['src', 'node_modules'],
 	},
-	watch: true,
 	watchOptions: {
 		ignored: /dist|manifest/,
 		aggregateTimeout: 300,
