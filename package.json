@@ -1,0 +1,36 @@
+{
+  "name": "WXAppHello",
+  "version": "0.0.0",
+  "description": "Hello wxapp",
+  "scripts": {
+    "start": "webpack --watch",
+    "debug": "node --inspect --debug-brk node_modules/.bin/webpack -w",
+    "build": "webpack"
+  },
+  "main": "dist/app.js",
+  "author": "cap32",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-eslint": "6.1",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "eslint": "2.4",
+    "eslint-import-resolver-webpack": "^0.8.1",
+    "eslint-plugin-babel": "3.2",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-react": "5.0",
+    "file-loader": "^0.11.1",
+    "webpack": "^2.3.2",
+    "webpack-sources": "^0.2.3",
+    "wxapp-webpack-plugin": "^0.0.0-4"
+  },
+  "dependencies": {
+    "babel-plugin-lodash": "^3.2.11",
+    "babel-runtime": "^6.23.0",
+    "es6-promise": "^4.1.0",
+    "lodash": "^4.17.4"
+  }
+}
