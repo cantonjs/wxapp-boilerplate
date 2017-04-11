@@ -18,7 +18,7 @@ export default {
 				loader: 'babel-loader',
 			},
 			{
-				test: /\.(wxss|wxml|json)$/,
+				test: /\.(png|jpg|gif|wxss|wxml|json)$/,
 				include: /src/,
 				loader: 'file-loader',
 				options: {
