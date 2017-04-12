@@ -1,6 +1,10 @@
 
+import { camelCase } from 'lodash';
+
 App({
 	onLaunch() {
+
+		console.log(camelCase('OnLaunch'));
 
 		//调用API从本地缓存中获取数据
 		var logs = wx.getStorageSync('logs') || [];
