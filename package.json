@@ -29,6 +29,7 @@
     "wxapp-webpack-plugin": "^0.0.0-7"
   },
   "dependencies": {
+    "babel-plugin-lodash": "^3.2.11",
     "babel-runtime": "^6.23.0",
     "es6-promise": "^4.1.0",
     "lodash": "^4.17.4"

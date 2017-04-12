@@ -8,5 +8,6 @@
 			"polyfill": false,
 			"regenerator": true,
 		}],
+		"lodash",
 	]
 }
