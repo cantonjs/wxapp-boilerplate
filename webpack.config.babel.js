@@ -1,6 +1,6 @@
 
 import { resolve } from 'path';
-import { DefinePlugin } from 'webpack';
+import { DefinePlugin, EnvironmentPlugin } from 'webpack';
 import WXAppWebpackPlugin from 'wxapp-webpack-plugin';
 
 const isDev = process.env.NODE_ENV !== 'production';
@@ -60,6 +60,9 @@ export default {
 		],
 	},
 	plugins: [
+		new EnvironmentPlugin({
+			NODE_ENV: 'development',
+		}),
 		new DefinePlugin({
 			__DEV__: isDev,
 		}),
