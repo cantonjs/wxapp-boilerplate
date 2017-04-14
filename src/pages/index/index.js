@@ -1,7 +1,7 @@
 
 import { flow } from 'lodash';
 
-// const delay = (t = 0) => new Promise((resolve) => setTimeout(resolve, t));
+const delay = (t = 0) => new Promise((resolve) => setTimeout(resolve, t));
 
 //获取应用实例
 const app = getApp(); // eslint-disable-line no-undef
@@ -17,9 +17,9 @@ Page({
 			url: '../logs/logs',
 		});
 	},
-	onLoad() {
+	async onLoad() {
 
-		// await delay();
+		await delay();
 
 		const log = flow(() => {
 			console.log('onLoad');

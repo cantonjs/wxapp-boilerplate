@@ -1,8 +1,11 @@
 
+@import 'share';
+
 $r: 120rpx;
 
 .userinfo {
-  display: flex;
+  @extend %center-flex;
+
   flex-direction: column;
   align-items: center;
 }

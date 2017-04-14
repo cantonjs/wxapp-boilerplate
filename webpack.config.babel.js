@@ -1,14 +1,18 @@
 
-import path from 'path';
+import { resolve } from 'path';
 import WXAppWebpackPlugin from 'wxapp-webpack-plugin';
 
 export default {
 	entry: {
-		app: ['./src/utils/bomPolyfill.js', './src/app.js'],
+		app: [
+			'es6-promise/lib/es6-promise.auto.js',
+			'./src/utils/bomPolyfill.js',
+			'./src/app.js',
+		],
 	},
 	output: {
 		filename: '[name].js',
-		path: path.resolve(__dirname, 'dist'),
+		path: resolve('dist'),
 	},
 	module: {
 		rules: [
@@ -39,6 +43,9 @@ export default {
 					},
 					{
 						loader: 'sass-loader',
+						options: {
+							includePaths: [resolve('src', 'styles')]
+						},
 					},
 				],
 			},
