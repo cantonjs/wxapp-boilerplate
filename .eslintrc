@@ -95,7 +95,7 @@
 
         "jsx-quotes": [1, "prefer-double"],
 
-        "babel/new-cap": 1,
+        "babel/new-cap": 0,
         "babel/object-curly-spacing": [1, "always"],
         "babel/object-shorthand": 1,
         "babel/arrow-parens": 1,
@@ -275,11 +275,6 @@
     },
     "globals": {
         "__DEV__": true,
-        "__PROD__": true,
-        "__DEBUG__": true,
-        "__SERVER__": true,
-        "__CLIENT__": true,
-        "__ROOT_PATH__": true,
         "App": true,
         "Page": true,
         "wx": true
