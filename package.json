@@ -26,7 +26,7 @@
     "sass-loader": "^6.0.3",
     "webpack": "^2.3.2",
     "webpack-sources": "^0.2.3",
-    "wxapp-webpack-plugin": "^0.0.0-7",
+    "wxapp-webpack-plugin": "^0.0.0-8",
     "wxml-loader": "^0.0.0-0"
   },
   "dependencies": {
