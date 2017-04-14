@@ -22,7 +22,7 @@ Page({
 		await delay();
 
 		const log = flow(() => {
-			console.log('onLoad');
+			console.log('DEV: ', __DEV__);
 		});
 
 		log();

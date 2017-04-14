@@ -4,7 +4,8 @@
   "description": "wxapp boilerplate",
   "scripts": {
     "start": "webpack --watch",
-    "build": "webpack"
+    "build": "webpack",
+    "prod": "NODE_ENV=production webpack -p"
   },
   "main": "dist/app.js",
   "author": "cap32",

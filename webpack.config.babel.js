@@ -1,11 +1,14 @@
 
 import { resolve } from 'path';
+import { DefinePlugin } from 'webpack';
 import WXAppWebpackPlugin from 'wxapp-webpack-plugin';
+
+const isDev = process.env.NODE_ENV !== 'production';
 
 export default {
 	entry: {
 		app: [
-			'es6-promise/lib/es6-promise.auto.js',
+			`es6-promise/dist/es6-promise.auto${isDev ? '.min' : ''}.js`,
 			'./src/utils/bomPolyfill.js',
 			'./src/app.js',
 		],
@@ -57,9 +60,12 @@ export default {
 		],
 	},
 	plugins: [
+		new DefinePlugin({
+			__DEV__: isDev,
+		}),
 		new WXAppWebpackPlugin(),
 	],
-	devtool: 'source-map',
+	devtool: isDev ? 'source-map' : false,
 	resolve: {
 		modules: ['src', 'node_modules'],
 	},
