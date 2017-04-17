@@ -15,6 +15,7 @@ export default {
 	},
 	output: {
 		filename: '[name].js',
+		publicPath: '/',
 		path: resolve('dist'),
 	},
 	module: {
@@ -25,12 +26,24 @@ export default {
 				loader: 'babel-loader',
 			},
 			{
-				test: /\.(png|jpg|gif|json)$/,
+				test: /\.json$/,
+				include: /src/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							useRelativePath: true,
+							name: '[name].[ext]',
+						},
+					},
+				],
+			},
+			{
+				test: /\.(png|jpg|gif)$/,
 				include: /src/,
 				loader: 'file-loader',
 				options: {
-					useRelativePath: true,
-					name: '[name].[ext]',
+					name: '[name]_[hash:7].[ext]',
 				}
 			},
 			{
@@ -54,8 +67,41 @@ export default {
 			},
 			{
 				test: /\.wxml$/,
+				include: /src\/pages/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							useRelativePath: true,
+							name: '[name].[ext]',
+						},
+					},
+					{
+						loader: 'wxml-loader',
+						options: {
+							root: resolve('src'),
+						},
+					},
+				],
+			},
+			{
+				test: /\.wxml$/,
 				include: /src/,
-				loader: 'wxml-loader',
+				exclude: /src\/pages/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: '[name]_[hash:7].[ext]',
+						},
+					},
+					{
+						loader: 'wxml-loader',
+						options: {
+							root: resolve('src'),
+						},
+					},
+				],
 			},
 		],
 	},
@@ -70,7 +116,7 @@ export default {
 	],
 	devtool: isDev ? 'source-map' : false,
 	resolve: {
-		modules: ['src', 'node_modules'],
+		modules: [resolve(__dirname, 'src'), 'node_modules'],
 	},
 	watchOptions: {
 		ignored: /dist|manifest/,

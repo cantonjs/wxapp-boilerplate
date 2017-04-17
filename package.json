@@ -4,6 +4,7 @@
   "description": "wxapp boilerplate",
   "scripts": {
     "start": "webpack --watch",
+    "webpack": "webpack",
     "build": "NODE_ENV=production webpack -p",
     "create": "create-wxapp-page -d src"
   },
@@ -29,8 +30,8 @@
     "sass-loader": "^6.0.3",
     "webpack": "^2.3.2",
     "webpack-sources": "^0.2.3",
-    "wxapp-webpack-plugin": "^0.0.0-8",
-    "wxml-loader": "^0.0.0-0"
+    "wxapp-webpack-plugin": "^0.0.0-10",
+    "wxml-loader": "^0.0.0-4"
   },
   "dependencies": {
     "es6-promise": "^4.1.0",

@@ -1,7 +1,8 @@
 <!--index.wxml-->
-<import src="../../templates/motto/motto.wxml"/>
+<import src="/templates/motto/motto.wxml"/>
 <view class="container">
   <view  bindtap="bindViewTap" class="userinfo">
+    <!-- <image class="userinfo-avatar" src="/images/face.png" background-size="cover"></image> -->
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>

@@ -277,7 +277,8 @@
         "__DEV__": true,
         "App": true,
         "Page": true,
-        "wx": true
+        "wx": true,
+        "getApp": true,
     },
     "settings": {
         "import/resolver": {
