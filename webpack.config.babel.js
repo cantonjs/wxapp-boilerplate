@@ -6,7 +6,7 @@ import StylelintPlugin from 'stylelint-webpack-plugin';
 
 const { NODE_ENV, LINT } = process.env;
 const isDev = NODE_ENV !== 'production';
-const shouldLint = !!LINT && LINT !== 'false';
+const shouldLint = !isDev || (!!LINT && LINT !== 'false');
 
 export default {
 	entry: {
@@ -28,7 +28,7 @@ export default {
 				include: /src/,
 				use: [
 					'babel-loader',
-					!isDev && 'eslint-loader',
+					shouldLint && 'eslint-loader',
 				].filter(Boolean),
 			},
 			{
@@ -122,7 +122,7 @@ export default {
 			__DEV__: isDev,
 		}),
 		new WXAppWebpackPlugin(),
-		!isDev && new StylelintPlugin(),
+		shouldLint && new StylelintPlugin(),
 	].filter(Boolean),
 	devtool: isDev ? 'source-map' : false,
 	resolve: {
