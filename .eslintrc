@@ -43,6 +43,7 @@
             "max": 2,
         }],
         "no-unused-vars": 1,
+        "spaced-comment": 0,
     },
     "globals": {
         "__DEV__": true,
