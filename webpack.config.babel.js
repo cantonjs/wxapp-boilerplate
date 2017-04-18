@@ -2,8 +2,11 @@
 import { resolve } from 'path';
 import { DefinePlugin, EnvironmentPlugin } from 'webpack';
 import WXAppWebpackPlugin from 'wxapp-webpack-plugin';
+import StylelintPlugin from 'stylelint-webpack-plugin';
 
-const isDev = process.env.NODE_ENV !== 'production';
+const { NODE_ENV, LINT } = process.env;
+const isDev = NODE_ENV !== 'production';
+const shouldLint = !!LINT && LINT !== 'false';
 
 export default {
 	entry: {
@@ -23,7 +26,10 @@ export default {
 			{
 				test: /\.js$/,
 				include: /src/,
-				loader: 'babel-loader',
+				use: [
+					'babel-loader',
+					!isDev && 'eslint-loader',
+				].filter(Boolean),
 			},
 			{
 				test: /\.json$/,
@@ -116,7 +122,8 @@ export default {
 			__DEV__: isDev,
 		}),
 		new WXAppWebpackPlugin(),
-	],
+		!isDev && new StylelintPlugin(),
+	].filter(Boolean),
 	devtool: isDev ? 'source-map' : false,
 	resolve: {
 		modules: [resolve(__dirname, 'src'), 'node_modules'],

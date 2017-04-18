@@ -85,7 +85,6 @@
 	$default-bg-color: rgba(255, 255, 255, 0.5),
 	$fallback-bg-color: rgba(255, 255, 255, 0.9)
 ) {
-
 	.#{$class-name} {
 		background-color: $fallback-bg-color;
 	}
@@ -96,6 +95,4 @@
 			backdrop-filter: saturate($saturate) blur($blur);
 		}
 	}
-
 }
-
