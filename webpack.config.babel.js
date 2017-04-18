@@ -60,7 +60,10 @@ export default {
 					{
 						loader: 'sass-loader',
 						options: {
-							includePaths: [resolve('src', 'styles')]
+							includePaths: [
+								resolve('src', 'styles'),
+								resolve('src'),
+							],
 						},
 					},
 				],
