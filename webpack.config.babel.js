@@ -4,9 +4,9 @@ import { DefinePlugin, EnvironmentPlugin } from 'webpack';
 import WXAppWebpackPlugin from 'wxapp-webpack-plugin';
 import StylelintPlugin from 'stylelint-webpack-plugin';
 
-const { NODE_ENV, LINT } = process.env;
+const { NODE_ENV, LINT, NO_LINT } = process.env;
 const isDev = NODE_ENV !== 'production';
-const shouldLint = !isDev || (!!LINT && LINT !== 'false');
+const shouldLint = (!isDev || (!!LINT && LINT !== 'false')) && !NO_LINT;
 
 export default {
 	entry: {
