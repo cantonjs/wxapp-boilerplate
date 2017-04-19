@@ -1,11 +1,9 @@
 {
     "parser": "babel-eslint",
-    "plugins": [
-        "import",
-        "promise",
-    ],
     "extends": [
         "standard",
+        "plugin:promise/recommended",
+        "plugin:import/recommended",
     ],
     "env": {
         "browser": true,
@@ -15,7 +13,15 @@
         "jest": true,
     },
     "rules": {
+        "import/no-absolute-path": 2,
+        "import/no-extraneous-dependencies": 2,
+        "import/no-mutable-exports": 2,
+        "import/newline-after-import": 1,
+        "import/unambiguous": 0,
+
         "promise/avoid-new": 0,
+        "promise/no-callback-in-promise": 0,
+        "promise/always-return": 0,
 
         "semi": [1, "always"],
         "no-tabs": 0,
