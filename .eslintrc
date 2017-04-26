@@ -48,7 +48,12 @@
         "no-multiple-empty-lines": [1, {
             "max": 2,
         }],
-        "no-unused-vars": 1,
+        "no-unused-vars": [1, {
+            "vars": "all",
+            "args": "after-used",
+            "caughtErrors": "none",
+            "ignoreRestSiblings": true,
+        }],
         "spaced-comment": 0,
     },
     "globals": {
