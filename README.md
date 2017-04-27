@@ -31,6 +31,11 @@
 - `yarn create` 快速创建微信小程序页面
 
 
+## 注意
+
+暂不支持直接引入 `app.json` 上的 `tabBar.list.iconPath` 和 `tabBar.list.selectedIconPath` 文件，需要配合 `copy-webpack-plugin` 手动引入
+
+
 ## 相关项目
 
 - [react-lib-boilerplate](https://github.com/cantonjs/react-lib-boilerplate)
