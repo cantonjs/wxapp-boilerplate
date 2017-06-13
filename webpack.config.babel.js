@@ -76,7 +76,7 @@ export default {
 			},
 			{
 				test: /\.wxml$/,
-				include: /src\/pages/,
+				include: resolve('src/pages'),
 				use: [
 					{
 						loader: 'file-loader',
@@ -95,8 +95,8 @@ export default {
 			},
 			{
 				test: /\.wxml$/,
-				include: /src/,
-				exclude: /src\/pages/,
+				include: resolve('src'),
+				exclude: resolve('src/pages'),
 				use: [
 					{
 						loader: 'file-loader',
