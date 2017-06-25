@@ -36,7 +36,7 @@
     "stylelint-scss": "^1.4.4",
     "stylelint-webpack-plugin": "^0.7.0",
     "webpack": "^3.0.0",
-    "wxapp-webpack-plugin": "^0.0.0-10",
+    "wxapp-webpack-plugin": "^0.0.0-11",
     "wxml-loader": "^0.0.0-4"
   },
   "dependencies": {
