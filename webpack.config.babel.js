@@ -49,7 +49,8 @@ export default {
 				include: /src/,
 				loader: 'file-loader',
 				options: {
-					name: '[name]_[hash:7].[ext]',
+					name: '/[name]_[hash:7].[ext]',
+					outputPath: 'images',
 				}
 			},
 			{
