@@ -76,6 +76,19 @@ export default {
 				],
 			},
 			{
+				test: /\.wxss$/,
+				include: /src/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							useRelativePath: true,
+							name: '[name].wxss',
+						}
+					},
+				],
+			},
+			{
 				test: /\.wxml$/,
 				include: resolve('src/pages'),
 				use: [
