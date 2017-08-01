@@ -5,8 +5,10 @@
   "scripts": {
     "start": "webpack --watch",
     "webpack": "webpack",
+    "prebuild": "rimraf dist",
     "build": "NODE_ENV=production webpack -p",
-    "create": "create-wxapp-page -d src"
+    "create": "create-wxapp-page -d src",
+    "test": "jest"
   },
   "main": "dist/app.js",
   "author": "cap32",
@@ -14,6 +16,7 @@
   "devDependencies": {
     "babel-core": "^6.24.0",
     "babel-eslint": "6.1",
+    "babel-jest": "^20.0.3",
     "babel-loader": "^6.4.1",
     "babel-plugin-lodash": "^3.2.11",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -29,7 +32,10 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "file-loader": "^0.11.1",
+    "glob": "^7.1.2",
+    "jest": "^20.0.4",
     "node-sass": "^4.5.2",
+    "rimraf": "^2.6.1",
     "sass-loader": "^6.0.3",
     "stylelint": "^7.10.1",
     "stylelint-config-standard": "^16.0.0",
@@ -43,5 +49,11 @@
     "babel-runtime": "^6.23.0",
     "es6-promise": "^4.1.0",
     "lodash": "^4.17.4"
+  },
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "node_modules",
+      "lib"
+    ]
   }
 }
