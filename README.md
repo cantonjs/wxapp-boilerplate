@@ -28,7 +28,7 @@
 
 - `yarn start` 启动 `webpack` 开发项目，能监听文件变化自动重新编译
 - `yarn build` 编译生成 `production` 环境的代码到 `dist` 
-- `yarn create` 快速创建微信小程序页面
+- `yarn create-page` 快速创建微信小程序页面
 
 
 ## 注意

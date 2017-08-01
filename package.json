@@ -7,7 +7,7 @@
     "webpack": "webpack",
     "prebuild": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack -p",
-    "create": "create-wxapp-page -d src",
+    "create-page": "create-wxapp-page -d src",
     "test": "jest"
   },
   "main": "dist/app.js",
