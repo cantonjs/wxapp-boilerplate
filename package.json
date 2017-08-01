@@ -12,7 +12,10 @@
   },
   "main": "dist/app.js",
   "author": "cap32",
-  "license": "MIT",
+  "license": "MIT",,
+  "engines": {
+    "node": ">=4.2.1"
+  },
   "devDependencies": {
     "babel-core": "^6.24.0",
     "babel-eslint": "6.1",
@@ -39,7 +42,7 @@
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.6",
     "stylelint": "^8.0.0",
-    "stylelint-config-standard": "^16.0.0",
+    "stylelint-config-standard": "^17.0.0",
     "stylelint-scss": "^1.4.4",
     "stylelint-webpack-plugin": "^0.9.0",
     "webpack": "^3.4.1",
