@@ -6,7 +6,7 @@
     "start": "webpack --watch",
     "webpack": "webpack",
     "prebuild": "rimraf dist",
-    "build": "NODE_ENV=production webpack -p",
+    "build": "cross-env NODE_ENV=production webpack -p",
     "create": "create-wxapp-page -d src",
     "test": "jest"
   },
@@ -23,6 +23,7 @@
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-stage-0": "^6.22.0",
     "create-wxapp-page": "^0.0.5",
+    "cross-env": "^5.0.1",
     "eslint": "^3.19.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-import-resolver-webpack": "^0.8.1",
