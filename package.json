@@ -44,7 +44,7 @@
     "stylelint-webpack-plugin": "^0.9.0",
     "webpack": "^3.4.1",
     "wxapp-webpack-plugin": "^0.0.0-11",
-    "wxml-loader": "^0.0.0-4"
+    "wxml-loader": "^0.0.0-5"
   },
   "dependencies": {
     "babel-runtime": "^6.23.0",
