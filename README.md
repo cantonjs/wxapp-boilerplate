@@ -16,7 +16,7 @@
 
 ## 开始使用
 
-确保安装了 [Node.js](https://nodejs.org/) (>= `v6.0`) 和 [yarn](https://yarnpkg.com)
+确保安装了 [Node.js](https://nodejs.org/) (>= `v4.2`) 和 [yarn](https://yarnpkg.com) 或 [npm](https://www.npmjs.com/package/npm)
 
 1. `git clone` 此项目
 2. 通过命令行工具 `cd` 到这个目录，执行 `yarn` 安装依赖模块
