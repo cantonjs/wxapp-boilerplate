@@ -12,7 +12,7 @@
   },
   "main": "dist/app.js",
   "author": "cap32",
-  "license": "MIT",,
+  "license": "MIT",
   "engines": {
     "node": ">=4.2.1"
   },
