@@ -1435,9 +1435,9 @@ create-hmac@^1.1.0, create-hmac@^1.1.2:
     create-hash "^1.1.0"
     inherits "^2.0.1"
 
-create-wxapp-page@^1.0.0:
-  version "1.0.0"
-  resolved "http://registry.npm.taobao.org/create-wxapp-page/download/create-wxapp-page-1.0.0.tgz#20c33e5aeb3db3c94fd108731ec633a2b58de8ab"
+create-wxapp-page@^1.0.1:
+  version "1.0.1"
+  resolved "http://registry.npm.taobao.org/create-wxapp-page/download/create-wxapp-page-1.0.1.tgz#74409a8f1f358beb43f07ba35e5aa9e874ac1d4a"
   dependencies:
     inquirer "^3.0.6"
     mkdirp "^0.5.1"
