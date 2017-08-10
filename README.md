@@ -28,7 +28,7 @@
 
 - `yarn start` 启动 `webpack` 开发项目，能监听文件变化自动重新编译
 - `yarn build` 编译生成 `production` 环境的代码到 `dist` 
-- `yarn create-page` 快速创建微信小程序页面
+- `yarn create-page` 快速创建微信小程序页面（更多 `create-page` 的用法，请查看 [create-wxapp-page](https://github.com/cantonjs/create-wxapp-page)）
 
 
 ## 注意
@@ -38,6 +38,7 @@
 
 ## 相关项目
 
+- [create-wxapp-page](https://github.com/cantonjs/create-wxapp-page)
 - [react-lib-boilerplate](https://github.com/cantonjs/react-lib-boilerplate)
 - [front-end-lib-boilerplate](https://github.com/cantonjs/front-end-lib-boilerplate)
 - [node-cli-boilerplate](https://github.com/cantonjs/node-cli-boilerplate)
