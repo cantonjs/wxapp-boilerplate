@@ -8,6 +8,20 @@ const { NODE_ENV, LINT, NO_LINT } = process.env;
 const isDev = NODE_ENV !== 'production';
 const shouldLint = (!isDev || (!!LINT && LINT !== 'false')) && !NO_LINT;
 
+const createRelativeFile = (outputPath, ext = '[ext]') => ({
+
+	/**
+	 * TODO
+	 *
+	 * should use `useRelativePath: true`, but there's a bug
+	 * https://github.com/webpack-contrib/file-loader/issues/149
+	 */
+
+	publicPath: (file) => `../../${file}`,
+	outputPath: outputPath,
+	name: `/[name]_[hash:7].${ext}`,
+});
+
 export default {
 	entry: {
 		app: [
@@ -32,6 +46,18 @@ export default {
 				].filter(Boolean),
 			},
 			{
+				test: /\.wxs$/,
+				include: /src/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: createRelativeFile('wxs', 'wxs'),
+					},
+					'babel-loader',
+					shouldLint && 'eslint-loader',
+				].filter(Boolean),
+			},
+			{
 				test: /\.json$/,
 				include: /src/,
 				use: [
@@ -48,10 +74,7 @@ export default {
 				test: /\.(png|jpg|gif)$/,
 				include: /src/,
 				loader: 'file-loader',
-				options: {
-					name: '/[name]_[hash:7].[ext]',
-					outputPath: 'images',
-				}
+				options: createRelativeFile('images'),
 			},
 			{
 				test: /\.scss$/,
@@ -114,9 +137,7 @@ export default {
 				use: [
 					{
 						loader: 'file-loader',
-						options: {
-							name: '[name]_[hash:7].[ext]',
-						},
+						options: createRelativeFile('wxml'),
 					},
 					{
 						loader: 'wxml-loader',
