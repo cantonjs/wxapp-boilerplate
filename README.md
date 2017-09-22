@@ -1,6 +1,7 @@
 # wxapp-boilerplate
 使用 `webpack`, `babel`, `scss` 开发的微信／支付宝小程序项目脚手架
 
+🎉【2017-9-22】支持兼容支付宝小程序开发
 
 ## 功能
 
@@ -42,6 +43,11 @@
 ## 注意
 
 暂不支持直接引入 `app.json` 上的 `tabBar.list.iconPath` 和 `tabBar.list.selectedIconPath` 文件，需要配合 `copy-webpack-plugin` 手动引入
+
+
+## 更新日志
+
+[Changlog](/blob/master/CHANGELOG.md)
 
 
 ## 相关项目
