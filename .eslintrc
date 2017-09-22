@@ -58,6 +58,8 @@
     },
     "globals": {
         "__DEV__": true,
+        "__WECHAT__": true,
+        "__ALIPAY__": true,
         "App": true,
         "Page": true,
         "wx": true,

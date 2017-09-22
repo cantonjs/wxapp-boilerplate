@@ -22,6 +22,8 @@ Page({
 		await delay();
 
 		const log = flow(() => {
+			console.log('is wechat mini program: ', __WECHAT__);
+			console.log('is alipay mini program: ', __ALIPAY__);
 			console.log('DEV: ', __DEV__);
 		});
 

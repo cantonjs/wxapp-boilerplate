@@ -5443,18 +5443,18 @@ write@^0.2.1:
   dependencies:
     mkdirp "^0.5.1"
 
-wxapp-webpack-plugin@^0.0.0-11:
-  version "0.0.0-11"
-  resolved "http://registry.npm.taobao.org/wxapp-webpack-plugin/download/wxapp-webpack-plugin-0.0.0-11.tgz#a73d1e53857da4a0dccc4de4475a4fb9ab2454a7"
+wxapp-webpack-plugin@^0.0.0-13:
+  version "0.0.0-13"
+  resolved "http://registry.npm.taobao.org/wxapp-webpack-plugin/download/wxapp-webpack-plugin-0.0.0-13.tgz#3ef6a2cd127faabdf90d45bd5a3444fce6a38ae9"
   dependencies:
     fs-extra "^3.0.1"
     globby "^6.1.0"
     lodash "^4.17.4"
     webpack-sources "^0.2.3"
 
-wxml-loader@^0.0.0-6:
-  version "0.0.0-6"
-  resolved "http://registry.npm.taobao.org/wxml-loader/download/wxml-loader-0.0.0-6.tgz#5d008f096fdc71992f5a10d6d1ea6409b7d2d6c3"
+wxml-loader@^0.1.0:
+  version "0.1.0"
+  resolved "http://registry.npm.taobao.org/wxml-loader/download/wxml-loader-0.1.0.tgz#e632c2b7d1ddaa8497e6fb7a7d1073d76211ca92"
   dependencies:
     html-minifier "^3.5.3"
     loader-utils "^1.1.0"

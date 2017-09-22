@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "wxapp boilerplate",
   "scripts": {
-    "start": "webpack --watch",
+    "start": "webpack --env.target=Wechat --watch",
     "webpack": "webpack",
     "prebuild": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack -p",
@@ -46,8 +46,8 @@
     "stylelint-scss": "^1.4.4",
     "stylelint-webpack-plugin": "^0.9.0",
     "webpack": "^3.4.1",
-    "wxapp-webpack-plugin": "^0.0.0-11",
-    "wxml-loader": "^0.0.0-6"
+    "wxapp-webpack-plugin": "^0.0.0-13",
+    "wxml-loader": "^0.1.0"
   },
   "dependencies": {
     "babel-runtime": "^6.23.0",
