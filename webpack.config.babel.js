@@ -37,7 +37,7 @@ export default (env = {}) => {
 		output: {
 			filename: '[name].js',
 			publicPath: '/',
-			path: resolve('dist'),
+			path: resolve('dist', isWechat ? 'wechat' : 'alipay'),
 		},
 		target: Targets[target],
 		module: {
