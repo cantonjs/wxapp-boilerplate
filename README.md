@@ -47,7 +47,7 @@
 
 ## 更新日志
 
-[Changlog](/blob/master/CHANGELOG.md)
+[Changlog](/CHANGELOG.md)
 
 
 ## 相关项目
