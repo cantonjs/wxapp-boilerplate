@@ -17,8 +17,11 @@
         "scss/selector-no-redundant-nesting-selector": true,
 
         "indentation": "tab",
+        "at-rule-no-unknown": [true, {
+            "ignoreAtRules": ["mixin", "extend", "include"],
+        }],
         "unit-no-unknown": [true, {
             "ignoreUnits": ["rpx"],
-        }]
+        }],
     }
 }
