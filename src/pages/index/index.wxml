@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<import src="/wxml/motto/motto.wxml"/>
+<import src="../../wxml/motto/motto.wxml"/>
 <wxs src="../../wxs/test.wxs" module="test" />
 <view class="container">
   <view  bindtap="bindViewTap" class="userinfo">

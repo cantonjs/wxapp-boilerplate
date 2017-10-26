@@ -8,19 +8,25 @@ const { NODE_ENV, LINT, NO_LINT } = process.env;
 const isDev = NODE_ENV !== 'production';
 const shouldLint = (!isDev || (!!LINT && LINT !== 'false')) && !NO_LINT;
 
-const createRelativeFile = (outputPath, ext = '[ext]') => ({
-
-	/**
-	 * TODO
-	 *
-	 * should use `useRelativePath: true`, but there's a bug
-	 * https://github.com/webpack-contrib/file-loader/issues/149
-	 */
-
-	publicPath: (file) => `../../${file}`,
-	outputPath: outputPath,
-	name: `/[name]_[hash:7].${ext}`,
-});
+const relativeFileLoader = (ext = '[ext]') => [
+	{
+		loader: 'file-loader',
+		options: {
+			publicPath: '',
+			useRelativePath: true,
+			name: `[name].${ext}`,
+			emitFile: false,
+		},
+	},
+	{
+		loader: 'file-loader',
+		options: {
+			publicPath: '',
+			context: resolve('src'),
+			name: `[path][name].${ext}`,
+		},
+	},
+];
 
 export default (env = {}) => {
 	const target = env.target || 'Wechat';
@@ -54,44 +60,16 @@ export default (env = {}) => {
 					test: /\.wxs$/,
 					include: /src/,
 					use: [
-						{
-							loader: 'file-loader',
-							options: createRelativeFile('wxs', 'wxs'),
-						},
+						...relativeFileLoader(),
 						'babel-loader',
 						shouldLint && 'eslint-loader',
 					].filter(Boolean),
 				},
 				{
-					test: /\.json$/,
-					include: /src/,
-					use: [
-						{
-							loader: 'file-loader',
-							options: {
-								useRelativePath: true,
-								name: '[name].[ext]',
-							},
-						},
-					],
-				},
-				{
-					test: /\.(png|jpg|gif)$/,
-					include: /src/,
-					loader: 'file-loader',
-					options: createRelativeFile('images'),
-				},
-				{
 					test: /\.scss$/,
 					include: /src/,
 					use: [
-						{
-							loader: 'file-loader',
-							options: {
-								useRelativePath: true,
-								name: '[name].wxss',
-							}
-						},
+						...relativeFileLoader('wxss'),
 						{
 							loader: 'sass-loader',
 							options: {
@@ -104,46 +82,15 @@ export default (env = {}) => {
 					],
 				},
 				{
-					test: /\.wxss$/,
+					test: /\.(json|png|jpg|gif|wxss)$/,
 					include: /src/,
-					use: [
-						{
-							loader: 'file-loader',
-							options: {
-								useRelativePath: true,
-								name: '[name].wxss',
-							}
-						},
-					],
-				},
-				{
-					test: /\.wxml$/,
-					include: resolve('src/pages'),
-					use: [
-						{
-							loader: 'file-loader',
-							options: {
-								useRelativePath: true,
-								name: `[name].${isWechat ? 'wxml' : 'axml'}`,
-							},
-						},
-						{
-							loader: 'wxml-loader',
-							options: {
-								root: resolve('src'),
-							},
-						},
-					],
+					use: relativeFileLoader(),
 				},
 				{
 					test: /\.wxml$/,
 					include: resolve('src'),
-					exclude: resolve('src/pages'),
 					use: [
-						{
-							loader: 'file-loader',
-							options: createRelativeFile('wxml', isWechat ? 'wxml' : 'axml'),
-						},
+						...relativeFileLoader(isWechat ? 'wxml' : 'axml'),
 						{
 							loader: 'wxml-loader',
 							options: {
