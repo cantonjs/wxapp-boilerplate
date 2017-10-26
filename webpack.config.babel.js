@@ -1,6 +1,6 @@
 
 import { resolve } from 'path';
-import { DefinePlugin, EnvironmentPlugin, optimize } from 'webpack';
+import { DefinePlugin, EnvironmentPlugin, IgnorePlugin, optimize } from 'webpack';
 import WXAppWebpackPlugin, { Targets } from 'wxapp-webpack-plugin';
 import StylelintPlugin from 'stylelint-webpack-plugin';
 
@@ -115,6 +115,7 @@ export default (env = {}) => {
 				clear: !isDev,
 			}),
 			new optimize.ModuleConcatenationPlugin(),
+			new IgnorePlugin(/vertx/),
 			shouldLint && new StylelintPlugin(),
 		].filter(Boolean),
 		devtool: isDev ? 'source-map' : false,
