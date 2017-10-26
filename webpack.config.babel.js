@@ -111,7 +111,9 @@ export default (env = {}) => {
 				__ALIPAY__: isAlipay,
 				wx: isWechat ? 'wx' : 'my',
 			}),
-			new WXAppWebpackPlugin(),
+			new WXAppWebpackPlugin({
+				clear: !isDev,
+			}),
 			new optimize.ModuleConcatenationPlugin(),
 			shouldLint && new StylelintPlugin(),
 		].filter(Boolean),
