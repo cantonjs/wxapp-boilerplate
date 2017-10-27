@@ -3,6 +3,8 @@
 
 🎉【2017-9-22】支持兼容支付宝小程序开发
 
+![webpack-dashboard](./screenshots/webpack-dashboard.png)
+
 ## 功能
 
 - 支持引用 `node_modules` 模块
