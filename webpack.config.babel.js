@@ -3,6 +3,7 @@ import { resolve } from 'path';
 import { DefinePlugin, EnvironmentPlugin, IgnorePlugin, optimize } from 'webpack';
 import WXAppWebpackPlugin, { Targets } from 'wxapp-webpack-plugin';
 import StylelintPlugin from 'stylelint-webpack-plugin';
+import DashboardPlugin from 'webpack-dashboard/plugin';
 
 const { NODE_ENV, LINT, NO_LINT } = process.env;
 const isDev = NODE_ENV !== 'production';
@@ -116,6 +117,7 @@ export default (env = {}) => {
 			}),
 			new optimize.ModuleConcatenationPlugin(),
 			new IgnorePlugin(/vertx/),
+			new DashboardPlugin(),
 			shouldLint && new StylelintPlugin(),
 		].filter(Boolean),
 		devtool: isDev ? 'source-map' : false,
