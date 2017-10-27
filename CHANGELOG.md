@@ -1,5 +1,16 @@
 # Changelog
 
+## 2017-10-27
+
+### 增加
+
+- 增加默认采用 [webpack-dashboard](https://github.com/FormidableLabs/webpack-dashboard) 来展示 webpack 状态
+
+### 更新
+
+- webpack 更新至 `v3.8.1`
+
+
 ## 2017-10-26
 
 ### 变化
