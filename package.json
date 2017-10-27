@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "description": "wxapp boilerplate",
   "scripts": {
-    "start": "webpack-dashboard -- npm run watch",
-    "start:alipay": "webpack-dashboard -- npm run watch:alipay",
+    "start": "npm run dashboard -- npm run watch",
+    "start:alipay": "npm run dashboard -- npm run watch:alipay",
+    "dashboard": "webpack-dashboard -t wxapp-boilerplate",
     "webpack": "webpack",
     "watch": "webpack --watch",
     "watch:alipay": "webpack --watch --env.target=Alipay",
