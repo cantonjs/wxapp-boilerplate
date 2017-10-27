@@ -9,6 +9,7 @@
 ### 更新
 
 - webpack 更新至 `v3.8.1`
+- [create-wxapp-page](https://github.com/cantonjs/create-wxapp-page) 更新至 `v1.2.0`
 
 
 ## 2017-10-26
