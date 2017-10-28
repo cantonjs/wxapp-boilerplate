@@ -49,7 +49,7 @@
 
 ## 更新日志
 
-[Changlog](/CHANGELOG.md)
+[Changelog](/CHANGELOG.md)
 
 
 ## 相关项目
