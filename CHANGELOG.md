@@ -1,5 +1,18 @@
 # Changelog
 
+## 2017-11-18
+
+### 增加
+
+- 支持微信小程序 [Components](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/custom-component/)
+
+### 更新
+
+- [wxapp-webpack-plugin](https://github.com/Cap32/wxapp-webpack-plugin) 更新至 `v0.16.0`
+- [node-sass](https://github.com/sass/node-sass) 更新至 `v4.6.1`
+- [sass-loader](https://github.com/webpack-contrib/sass-loader) 更新至 `v6.0.6`
+
+
 ## 2017-10-27
 
 ### 增加
