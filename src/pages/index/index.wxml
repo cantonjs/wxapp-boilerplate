@@ -1,15 +1,15 @@
 <!--index.wxml-->
 <import src="../../wxml/motto/motto.wxml"/>
-<wxs src="../../wxs/test.wxs" module="test" />
+<wxs src="../../wxs/powered.wxs" module="powered" />
+
 <view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  <view bindtap="bindViewTap">
+    <user avatarUrl="{{userInfo.avatarUrl}}" nickName="{{userInfo.nickName}}"></user>
   </view>
-  <view class="usermotto">
+  <view class="motto">
     <template is="motto" data="{{motto:motto}}" />
   </view>
-  <view>
-    <text>{{test.message}}</text>
+  <view class="powered">
+    <text>{{powered.by}}</text>
   </view>
 </view>

@@ -1,26 +1,24 @@
 
 @import 'share';
 
-$r: 120rpx;
-
-.userinfo {
+.motto {
 	@extend %center-flex;
 
-	flex-direction: column;
+	margin-top: 200px;
 	align-items: center;
 }
 
-.userinfo-avatar {
+.face {
+	$r: 24px;
+
 	width: $r;
 	height: $r;
-	margin: 20rpx;
 	border-radius: 50%;
+	margin-right: 10px;
 }
 
-.userinfo-nickname {
-	color: #aaa;
-}
-
-.usermotto {
-	margin-top: 200px;
+.powered {
+	margin-top: 30px;
+	font-size: 11px;
+	color: gray;
 }

@@ -1,3 +1,0 @@
-
-const name = 'wxs';
-module.exports.message = `${name} works`;
