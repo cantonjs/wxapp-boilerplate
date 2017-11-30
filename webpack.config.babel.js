@@ -117,7 +117,7 @@ export default (env = {}) => {
 			}),
 			new optimize.ModuleConcatenationPlugin(),
 			new IgnorePlugin(/vertx/),
-			new DashboardPlugin(),
+			isDev && new DashboardPlugin(),
 			shouldLint && new StylelintPlugin(),
 		].filter(Boolean),
 		devtool: isDev ? 'source-map' : false,
