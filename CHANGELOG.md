@@ -1,5 +1,12 @@
 # Changelog
 
+## 2017-11-30
+
+### 修复
+
+- 修复 `yarn build` 提示 ['Component' is not defined](https://github.com/cantonjs/wxapp-boilerplate/issues/15) 问题 (@julytian)
+
+
 ## 2017-11-18
 
 ### 增加
