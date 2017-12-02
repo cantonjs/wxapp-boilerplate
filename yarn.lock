@@ -6013,9 +6013,9 @@ wtf-8@1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/wtf-8/download/wtf-8-1.0.0.tgz#392d8ba2d0f1c34d1ee2d630f15d0efb68e1048a"
 
-wxapp-webpack-plugin@^0.16.0:
-  version "0.16.0"
-  resolved "http://registry.npm.taobao.org/wxapp-webpack-plugin/download/wxapp-webpack-plugin-0.16.0.tgz#e3ae4bf3d3a36e5463738f3fe873cb316b7c09b4"
+wxapp-webpack-plugin@^0.17.1:
+  version "0.17.1"
+  resolved "http://registry.npm.taobao.org/wxapp-webpack-plugin/download/wxapp-webpack-plugin-0.17.1.tgz#52d244b8046acd5f8bfbfa4a743ac7dee31dfcd9"
   dependencies:
     fs-extra "^3.0.1"
     globby "^6.1.0"
