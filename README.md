@@ -2,7 +2,6 @@
 使用 `webpack`, `babel`, `scss` 开发的微信／支付宝小程序项目脚手架
 
 🎉【2017-12-2】支持自动打包 `tabbar` 图标，无需 `copy-webpack-plugin` 等额外配置
-🎉【2017-9-22】支持兼容支付宝小程序开发
 
 ![webpack-dashboard](./screenshots/webpack-dashboard.png)
 
