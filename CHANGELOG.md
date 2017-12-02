@@ -1,5 +1,16 @@
 # Changelog
 
+## 2017-12-2
+
+### 功能
+
+- 支持自动打包 `tabbar` 图标，无需 `copy-webpack-plugin` 等额外配置
+
+### 更新
+
+- [wxapp-webpack-plugin](https://github.com/Cap32/wxapp-webpack-plugin) 更新至 `v0.17.1`
+
+
 ## 2017-11-30
 
 ### 修复
@@ -9,7 +20,7 @@
 
 ## 2017-11-18
 
-### 增加
+### 功能
 
 - 支持微信小程序 [Components](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/custom-component/)
 
@@ -22,7 +33,7 @@
 
 ## 2017-10-27
 
-### 增加
+### 功能
 
 - 增加默认采用 [webpack-dashboard](https://github.com/FormidableLabs/webpack-dashboard) 来展示 webpack 状态
 
@@ -47,7 +58,7 @@
 
 ## 2017-09-22
 
-### 增加
+### 功能
 
 - 支持兼容支付宝小程序
 

@@ -1,6 +1,7 @@
 # wxapp-boilerplate
 使用 `webpack`, `babel`, `scss` 开发的微信／支付宝小程序项目脚手架
 
+🎉【2017-12-2】支持自动打包 `tabbar` 图标，无需 `copy-webpack-plugin` 等额外配置
 🎉【2017-9-22】支持兼容支付宝小程序开发
 
 ![webpack-dashboard](./screenshots/webpack-dashboard.png)
@@ -40,11 +41,6 @@
 ## 兼容微信和支付宝小程序
 
 开发者可以选择一套源代码来开发微信和支付宝小程序，这脚手架支持自动编译 `wxml` 为 `axml`，转换 `wx:attr` 为 `a:attr`，转换 API `wx` 为 `my`，反之亦然。但个别接口在平台上也略有差异，开发者可以通过 `__WECHAT__` 或 `__ALIPAY__` 来动态处理。
-
-
-## 注意
-
-暂不支持直接引入 `app.json` 上的 `tabBar.list.iconPath` 和 `tabBar.list.selectedIconPath` 文件，需要配合 `copy-webpack-plugin` 手动引入
 
 
 ## 更新日志
