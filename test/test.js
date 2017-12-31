@@ -5,7 +5,7 @@ import rimraf from 'rimraf';
 import glob from 'glob';
 
 const inDist = (...args) => resolve('dist', ...args);
-const exist = (...paths) => !!glob.sync(inDist(...paths))[0];
+const exist = (...paths) => !!glob.sync(inDist('wechat', ...paths))[0];
 const clear = () => rimraf.sync(inDist());
 
 beforeEach(clear);
@@ -17,7 +17,7 @@ test('development', () => {
 	expect(exist('app.json')).toBe(true);
 	expect(exist('app.wxss')).toBe(true);
 	expect(exist('common.js')).toBe(true);
-	expect(exist('motto_*.wxml')).toBe(true);
+	expect(exist('wxml/motto/motto.wxml')).toBe(true);
 	expect(exist('pages/index/index.js')).toBe(true);
 	expect(exist('pages/index/index.wxml')).toBe(true);
 	expect(exist('pages/index/index.wxss')).toBe(true);
