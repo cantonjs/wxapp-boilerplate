@@ -1441,7 +1441,11 @@ combined-stream@^1.0.5, combined-stream@~1.0.5:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@2.11.x, commander@^2.9.0, commander@~2.11.0:
+commander@2.12.x, commander@~2.12.1:
+  version "2.12.2"
+  resolved "http://registry.npm.taobao.org/commander/download/commander-2.12.2.tgz#0f5946c427ed9ec0d91a46bb9def53e54650e555"
+
+commander@^2.9.0, commander@~2.11.0:
   version "2.11.0"
   resolved "http://registry.npm.taobao.org/commander/download/commander-2.11.0.tgz#157152fd1e7a6c8d98a5b715cf376df928004563"
 
@@ -2735,18 +2739,18 @@ html-encoding-sniffer@^1.0.1:
   dependencies:
     whatwg-encoding "^1.0.1"
 
-html-minifier@^3.5.3:
-  version "3.5.3"
-  resolved "http://registry.npm.taobao.org/html-minifier/download/html-minifier-3.5.3.tgz#4a275e3b1a16639abb79b4c11191ff0d0fcf1ab9"
+html-minifier@^3.5.6:
+  version "3.5.8"
+  resolved "http://registry.npm.taobao.org/html-minifier/download/html-minifier-3.5.8.tgz#5ccdb1f73a0d654e6090147511f6e6b2ee312700"
   dependencies:
     camel-case "3.0.x"
     clean-css "4.1.x"
-    commander "2.11.x"
+    commander "2.12.x"
     he "1.1.x"
     ncname "1.0.x"
     param-case "2.1.x"
     relateurl "0.2.x"
-    uglify-js "3.0.x"
+    uglify-js "3.3.x"
 
 html-tags@^1.1.1:
   version "1.1.1"
@@ -5683,12 +5687,12 @@ uglify-es@^3.0.28:
     commander "~2.11.0"
     source-map "~0.6.1"
 
-uglify-js@3.0.x:
-  version "3.0.27"
-  resolved "http://registry.npm.taobao.org/uglify-js/download/uglify-js-3.0.27.tgz#a97db8c8ba6b9dba4e2f88d86aa9548fa6320034"
+uglify-js@3.3.x:
+  version "3.3.4"
+  resolved "http://registry.npm.taobao.org/uglify-js/download/uglify-js-3.3.4.tgz#d8ebb76f201a3798ac2f0b6519642fcca4a99834"
   dependencies:
-    commander "~2.11.0"
-    source-map "~0.5.1"
+    commander "~2.12.1"
+    source-map "~0.6.1"
 
 uglify-js@^2.6, uglify-js@^2.8.29:
   version "2.8.29"
@@ -6022,11 +6026,11 @@ wxapp-webpack-plugin@^0.17.1:
     lodash "^4.17.4"
     webpack-sources "^0.2.3"
 
-wxml-loader@^0.1.0:
-  version "0.1.0"
-  resolved "http://registry.npm.taobao.org/wxml-loader/download/wxml-loader-0.1.0.tgz#e632c2b7d1ddaa8497e6fb7a7d1073d76211ca92"
+wxml-loader@^0.1.1:
+  version "0.1.1"
+  resolved "http://registry.npm.taobao.org/wxml-loader/download/wxml-loader-0.1.1.tgz#3c6238bd8d8b7e0120e19d7a31a16d0593a7a67d"
   dependencies:
-    html-minifier "^3.5.3"
+    html-minifier "^3.5.6"
     loader-utils "^1.1.0"
     sax "^1.2.2"
 
