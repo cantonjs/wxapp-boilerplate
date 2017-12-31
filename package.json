@@ -14,7 +14,8 @@
     "build:wechat": "cross-env NODE_ENV=production webpack --env.target=Wechat -p",
     "build:alipay": "cross-env NODE_ENV=production webpack --env.target=Alipay -p",
     "build": "run-s build:*",
-    "create-page": "create-wxapp-page --dir=src --indent=tab --style=scss",
+    "create-page": "create-wxapp-page --type=page --dir=src --indent=tab --style=scss",
+    "create-component": "create-wxapp-page --type=component --dir=src --indent=tab --style=scss",
     "test": "jest"
   },
   "main": "dist/wechat/app.js",
@@ -32,7 +33,7 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-stage-0": "^6.22.0",
-    "create-wxapp-page": "^1.2.0",
+    "create-wxapp-page": "^2.0.2",
     "cross-env": "^5.0.1",
     "eslint": "^3.19.0",
     "eslint-config-standard": "^10.2.1",
