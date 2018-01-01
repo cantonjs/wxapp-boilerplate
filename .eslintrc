@@ -1,6 +1,7 @@
 {
     "parser": "babel-eslint",
     "extends": [
+        "prettier",
         "standard",
         "plugin:promise/recommended",
         "plugin:import/recommended",

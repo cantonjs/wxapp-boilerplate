@@ -14,6 +14,7 @@
     "build:wechat": "cross-env NODE_ENV=production webpack --env.target=Wechat -p",
     "build:alipay": "cross-env NODE_ENV=production webpack --env.target=Alipay -p",
     "build": "run-s build:*",
+    "format": "prettier-eslint --write \"+(src|test)/**/*.js\"",
     "create-page": "create-wxapp-page --type=page --dir=src --indent=tab --style=scss",
     "create-component": "create-wxapp-page --type=component --dir=src --indent=tab --style=scss",
     "test": "jest"
@@ -36,6 +37,7 @@
     "create-wxapp-page": "^2.0.2",
     "cross-env": "^5.0.1",
     "eslint": "^3.19.0",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-import-resolver-webpack": "^0.8.3",
     "eslint-loader": "^1.7.1",
@@ -48,6 +50,7 @@
     "jest": "^20.0.4",
     "node-sass": "^4.6.1",
     "npm-run-all": "^4.1.1",
+    "prettier-eslint-cli": "^4.7.0",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.6",
     "stylelint": "^8.0.0",
