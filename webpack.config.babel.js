@@ -52,7 +52,7 @@ export default (env = {}) => {
 				{
 					test: /\.js$/,
 					include: /src/,
-					exclude: /\/node_modules\//,
+					exclude: /node_modules/,
 					use: [
 						'babel-loader',
 						shouldLint && 'eslint-loader',
@@ -61,7 +61,7 @@ export default (env = {}) => {
 				{
 					test: /\.wxs$/,
 					include: /src/,
-					exclude: /\/node_modules\//,
+					exclude: /node_modules/,
 					use: [
 						...relativeFileLoader(),
 						'babel-loader',
