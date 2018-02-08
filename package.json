@@ -16,7 +16,7 @@
     "build": "run-s build:*",
     "lint:watch": "cross-env LINT=true run-s watch",
     "lint:build": "cross-env LINT=true run-s build",
-    "format": "prettier-eslint --write \"+(src|test)/**/*.js\"",
+    "prettier": "prettier-eslint --write \"+(src|test)/**/*.js\"",
     "create-page": "create-wxapp-page --type=page --dir=src --indent=tab --style=scss",
     "create-component": "create-wxapp-page --type=component --dir=src --indent=tab --style=scss",
     "test": "jest"
