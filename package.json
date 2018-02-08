@@ -14,6 +14,8 @@
     "build:wechat": "cross-env NODE_ENV=production webpack --env.target=Wechat --env.min",
     "build:alipay": "cross-env NODE_ENV=production webpack --env.target=Alipay --env.min",
     "build": "run-s build:*",
+    "lint:watch": "cross-env LINT=true run-s watch",
+    "lint:build": "cross-env LINT=true run-s build",
     "format": "prettier-eslint --write \"+(src|test)/**/*.js\"",
     "create-page": "create-wxapp-page --type=page --dir=src --indent=tab --style=scss",
     "create-component": "create-wxapp-page --type=component --dir=src --indent=tab --style=scss",

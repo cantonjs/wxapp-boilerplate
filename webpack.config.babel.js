@@ -10,9 +10,9 @@ import StylelintPlugin from 'stylelint-webpack-plugin';
 import DashboardPlugin from 'webpack-dashboard/plugin';
 import MinifyPlugin from 'babel-minify-webpack-plugin';
 
-const { NODE_ENV, LINT, NO_LINT } = process.env;
+const { NODE_ENV, LINT } = process.env;
 const isDev = NODE_ENV !== 'production';
-const shouldLint = (!isDev || (!!LINT && LINT !== 'false')) && !NO_LINT;
+const shouldLint = !!LINT && LINT !== 'false';
 
 const relativeFileLoader = (ext = '[ext]') => [
 	{
