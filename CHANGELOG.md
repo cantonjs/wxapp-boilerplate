@@ -1,5 +1,9 @@
 # Changelog
 
+## 2018-02-28
+
+- [UPGRADE] [wxml-loader](https://github.com/Cap32/wxml-loader) 更新至 `v0.1.2`
+
 
 ## 2017-12-31
 

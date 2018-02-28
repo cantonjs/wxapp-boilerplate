@@ -6671,9 +6671,9 @@ wxapp-webpack-plugin@^0.17.1:
     lodash "^4.17.4"
     webpack-sources "^0.2.3"
 
-wxml-loader@^0.1.1:
-  version "0.1.1"
-  resolved "http://registry.npm.taobao.org/wxml-loader/download/wxml-loader-0.1.1.tgz#3c6238bd8d8b7e0120e19d7a31a16d0593a7a67d"
+wxml-loader@^0.1.2:
+  version "0.1.2"
+  resolved "http://registry.npm.taobao.org/wxml-loader/download/wxml-loader-0.1.2.tgz#f14e19c0951ffbbcc730755a9b4ff1a5fde11a7d"
   dependencies:
     html-minifier "^3.5.6"
     loader-utils "^1.1.0"
