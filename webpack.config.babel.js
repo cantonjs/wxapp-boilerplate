@@ -13,26 +13,16 @@ import MinifyPlugin from 'babel-minify-webpack-plugin';
 const { NODE_ENV, LINT } = process.env;
 const isDev = NODE_ENV !== 'production';
 const shouldLint = !!LINT && LINT !== 'false';
+const srcDir = resolve('src');
 
-const relativeFileLoader = (ext = '[ext]') => [
-	{
-		loader: 'file-loader',
-		options: {
-			publicPath: '',
-			useRelativePath: true,
-			name: `[name].${ext}`,
-			emitFile: false
-		}
-	},
-	{
-		loader: 'file-loader',
-		options: {
-			publicPath: '',
-			context: resolve('src'),
-			name: `[path][name].${ext}`
-		}
+const relativeFileLoader = (ext = '[ext]') => ({
+	loader: 'file-loader',
+	options: {
+		useRelativePath: true,
+		name: `[name].${ext}`,
+		context: srcDir
 	}
-];
+});
 
 export default (env = {}) => {
 	const min = env.min;
@@ -66,7 +56,7 @@ export default (env = {}) => {
 					include: /src/,
 					exclude: /node_modules/,
 					use: [
-						...relativeFileLoader(),
+						relativeFileLoader(),
 						'babel-loader',
 						shouldLint && 'eslint-loader'
 					].filter(Boolean)
@@ -75,7 +65,7 @@ export default (env = {}) => {
 					test: /\.scss$/,
 					include: /src/,
 					use: [
-						...relativeFileLoader('wxss'),
+						relativeFileLoader('wxss'),
 						{
 							loader: 'sass-loader',
 							options: {
@@ -93,11 +83,12 @@ export default (env = {}) => {
 					test: /\.wxml$/,
 					include: resolve('src'),
 					use: [
-						...relativeFileLoader(isWechat ? 'wxml' : 'axml'),
+						relativeFileLoader(isWechat ? 'wxml' : 'axml'),
 						{
 							loader: 'wxml-loader',
 							options: {
-								root: resolve('src')
+								root: resolve('src'),
+								enforceRelativePath: true
 							}
 						}
 					]
@@ -121,7 +112,7 @@ export default (env = {}) => {
 			new IgnorePlugin(/vertx/),
 			isDev && new DashboardPlugin(),
 			shouldLint && new StylelintPlugin(),
-			min && new MinifyPlugin(),
+			min && new MinifyPlugin()
 		].filter(Boolean),
 		devtool: isDev ? 'source-map' : false,
 		resolve: {

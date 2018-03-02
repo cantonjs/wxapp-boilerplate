@@ -48,7 +48,7 @@
     "eslint-plugin-node": "^4.2.2",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
-    "file-loader": "^0.11.2",
+    "file-loader": "1.1.11",
     "glob": "^7.1.2",
     "jest": "^20.0.4",
     "node-sass": "^4.6.1",
@@ -63,7 +63,7 @@
     "webpack": "^3.8.1",
     "webpack-dashboard": "^1.0.0",
     "wxapp-webpack-plugin": "^0.17.1",
-    "wxml-loader": "^0.1.2"
+    "wxml-loader": "^0.2.0"
   },
   "dependencies": {
     "babel-runtime": "^6.23.0",
