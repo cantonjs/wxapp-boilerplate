@@ -1,8 +1,15 @@
 # Changelog
 
+## 2018-03-06
+
+- [FIXED] 修复 Windows 下路径问题 ([#21](https://github.com/cantonjs/wxapp-boilerplate/issues/21))
+- [UPGRADE] [wxml-loader](https://github.com/Cap32/wxml-loader) 更新至 `v0.2.1`
+
+
 ## 2018-03-02
 
 - [UPGRADE] [wxml-loader](https://github.com/Cap32/wxml-loader) 更新至 `v0.2.0`
+
 
 ## 2018-02-28
 
