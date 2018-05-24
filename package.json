@@ -1,11 +1,11 @@
 {
 	"name": "wxapp-boilerplate",
 	"version": "0.0.0",
-	"description": "wxapp boilerplate",
+	"description": "mini program dev boilerplate, supports wechat and alipay",
+	"private": true,
 	"scripts": {
 		"start": "webpack --watch",
 		"start:alipay": "webpack --watch --env.target=Alipay",
-		"dashboard": "webpack-dashboard -t wxapp-boilerplate",
 		"webpack": "webpack",
 		"deprecate:watch":
 			"echo \"'watch' is deprecated, please use 'start' instead\"",
@@ -31,7 +31,7 @@
 	"author": "cap32",
 	"license": "MIT",
 	"engines": {
-		"node": ">=4.2.1"
+		"node": ">=4"
 	},
 	"devDependencies": {
 		"babel-core": "^6.24.0",
