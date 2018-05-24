@@ -2,8 +2,6 @@
 
 使用 `webpack`, `babel`, `scss` 开发的微信／支付宝小程序项目脚手架
 
-![webpack-dashboard](./screenshots/webpack-dashboard.png)
-
 ## 功能
 
 * 支持引用 `node_modules` 模块
@@ -21,15 +19,15 @@
 
 确保安装了 [Node.js](https://nodejs.org/) (>= `v4.2`) 和 [yarn](https://yarnpkg.com) 或 [npm](https://www.npmjs.com/package/npm)
 
-1. `git clone` 此项目
-2. 通过命令行工具 `cd` 到这个目录，执行 `yarn` 安装依赖模块
-3. 执行 `yarn watch` 开始开发
-4. 通过微信开发者工具，添加 `dist/wechat` 目录到项目上
+1.  `git clone` 此项目
+2.  通过命令行工具 `cd` 到这个目录，执行 `yarn` 安装依赖模块
+3.  执行 `yarn start` 开始开发
+4.  通过微信开发者工具，添加 `dist/wechat` 目录到项目上
 
 ## 内置命令
 
-* `yarn watch` 启动 `webpack` 开发微信小程序项目，能监听文件变化自动重新编译
-* `yarn watch:alipay` 启动 `webpack` 开发支付宝小程序项目，能监听文件变化自动重新编译
+* `yarn start` 启动 `webpack` 开发微信小程序项目，能监听文件变化自动重新编译
+* `yarn start:alipay` 启动 `webpack` 开发支付宝小程序项目，能监听文件变化自动重新编译
 * `yarn build` 编译生成 `production` 环境的代码到 `dist/wechat` 和 `dist/alipay`
 * `yarn lint:build` 执行 `yarn build` 命令，并使用 eslint 和 stylelint 来校验代码规范
 * `yarn prettier` 执行 `prettier` 来格式化 src 目录下的代码

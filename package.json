@@ -1,79 +1,81 @@
 {
-  "name": "wxapp-boilerplate",
-  "version": "0.0.0",
-  "description": "wxapp boilerplate",
-  "scripts": {
-    "start": "npm run dashboard -- npm run watch",
-    "start:alipay": "npm run dashboard -- npm run watch:alipay",
-    "dashboard": "webpack-dashboard -t wxapp-boilerplate",
-    "webpack": "webpack",
-    "watch": "webpack --watch",
-    "watch:alipay": "webpack --watch --env.target=Alipay",
-    "prestart": "rimraf dist",
-    "prebuild": "rimraf dist",
-    "build:wechat": "cross-env NODE_ENV=production webpack --env.target=Wechat --env.min",
-    "build:alipay": "cross-env NODE_ENV=production webpack --env.target=Alipay --env.min",
-    "build": "run-s build:*",
-    "lint:watch": "cross-env LINT=true run-s watch",
-    "lint:build": "cross-env LINT=true run-s build",
-    "prettier": "prettier-eslint --write \"+(src|test)/**/*.js\"",
-    "create-page": "create-wxapp-page --type=page --dir=src --indent=tab --style=scss",
-    "create-component": "create-wxapp-page --type=component --dir=src --indent=tab --style=scss",
-    "test": "jest"
-  },
-  "main": "dist/wechat/app.js",
-  "author": "cap32",
-  "license": "MIT",
-  "engines": {
-    "node": ">=4.2.1"
-  },
-  "devDependencies": {
-    "babel-core": "^6.24.0",
-    "babel-eslint": "6.1",
-    "babel-jest": "^20.0.3",
-    "babel-loader": "^7.1.1",
-    "babel-minify-webpack-plugin": "^0.3.0",
-    "babel-plugin-lodash": "^3.2.11",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-es2015": "^6.24.0",
-    "babel-preset-stage-0": "^6.22.0",
-    "create-wxapp-page": "^2.0.2",
-    "cross-env": "^5.0.1",
-    "eslint": "^3.19.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-import-resolver-webpack": "^0.8.3",
-    "eslint-loader": "^1.7.1",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-node": "^4.2.2",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "file-loader": "1.1.11",
-    "glob": "^7.1.2",
-    "jest": "^20.0.4",
-    "node-sass": "^4.6.1",
-    "npm-run-all": "^4.1.1",
-    "prettier-eslint-cli": "^4.7.0",
-    "rimraf": "^2.6.1",
-    "sass-loader": "^6.0.6",
-    "stylelint": "^8.0.0",
-    "stylelint-config-standard": "^17.0.0",
-    "stylelint-scss": "^1.4.4",
-    "stylelint-webpack-plugin": "^0.9.0",
-    "webpack": "^3.8.1",
-    "webpack-dashboard": "^1.0.0",
-    "wxapp-webpack-plugin": "^0.17.1",
-    "wxml-loader": "^0.2.1"
-  },
-  "dependencies": {
-    "babel-runtime": "^6.23.0",
-    "es6-promise": "^4.1.0",
-    "lodash": "^4.17.4"
-  },
-  "jest": {
-    "modulePathIgnorePatterns": [
-      "node_modules",
-      "lib"
-    ]
-  }
+	"name": "wxapp-boilerplate",
+	"version": "0.0.0",
+	"description": "wxapp boilerplate",
+	"scripts": {
+		"start": "webpack --watch",
+		"start:alipay": "webpack --watch --env.target=Alipay",
+		"dashboard": "webpack-dashboard -t wxapp-boilerplate",
+		"webpack": "webpack",
+		"deprecate:watch":
+			"echo \"'watch' is deprecated, please use 'start' instead\"",
+		"watch": "run-s deprecate:watch start",
+		"watch:alipay": "run-s deprecate:watch start:alipay",
+		"prestart": "rimraf dist",
+		"prebuild": "rimraf dist",
+		"build:wechat":
+			"cross-env NODE_ENV=production webpack --env.target=Wechat --env.min",
+		"build:alipay":
+			"cross-env NODE_ENV=production webpack --env.target=Alipay --env.min",
+		"build": "run-s build:*",
+		"lint:watch": "cross-env LINT=true run-s watch",
+		"lint:build": "cross-env LINT=true run-s build",
+		"prettier": "prettier-eslint --write \"+(src|test)/**/*.js\"",
+		"create-page":
+			"create-wxapp-page --type=page --dir=src --indent=tab --style=scss",
+		"create-component":
+			"create-wxapp-page --type=component --dir=src --indent=tab --style=scss",
+		"test": "jest"
+	},
+	"main": "dist/wechat/app.js",
+	"author": "cap32",
+	"license": "MIT",
+	"engines": {
+		"node": ">=4.2.1"
+	},
+	"devDependencies": {
+		"babel-core": "^6.24.0",
+		"babel-eslint": "6.1",
+		"babel-jest": "^20.0.3",
+		"babel-loader": "^7.1.1",
+		"babel-minify-webpack-plugin": "^0.3.0",
+		"babel-plugin-lodash": "^3.2.11",
+		"babel-plugin-transform-runtime": "^6.23.0",
+		"babel-preset-es2015": "^6.24.0",
+		"babel-preset-stage-0": "^6.22.0",
+		"create-wxapp-page": "^2.0.2",
+		"cross-env": "^5.0.1",
+		"eslint": "^3.19.0",
+		"eslint-config-prettier": "^2.9.0",
+		"eslint-config-standard": "^10.2.1",
+		"eslint-import-resolver-webpack": "^0.8.3",
+		"eslint-loader": "^1.7.1",
+		"eslint-plugin-import": "^2.2.0",
+		"eslint-plugin-node": "^4.2.2",
+		"eslint-plugin-promise": "^3.5.0",
+		"eslint-plugin-standard": "^3.0.1",
+		"file-loader": "1.1.11",
+		"glob": "^7.1.2",
+		"jest": "^20.0.4",
+		"node-sass": "^4.6.1",
+		"npm-run-all": "^4.1.1",
+		"prettier-eslint-cli": "^4.7.0",
+		"rimraf": "^2.6.1",
+		"sass-loader": "^6.0.6",
+		"stylelint": "^8.0.0",
+		"stylelint-config-standard": "^17.0.0",
+		"stylelint-scss": "^1.4.4",
+		"stylelint-webpack-plugin": "^0.9.0",
+		"webpack": "^3.8.1",
+		"wxapp-webpack-plugin": "^0.17.1",
+		"wxml-loader": "^0.2.1"
+	},
+	"dependencies": {
+		"babel-runtime": "^6.23.0",
+		"es6-promise": "^4.1.0",
+		"lodash": "^4.17.4"
+	},
+	"jest": {
+		"modulePathIgnorePatterns": ["node_modules", "lib"]
+	}
 }

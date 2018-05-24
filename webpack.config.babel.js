@@ -7,7 +7,6 @@ import {
 } from 'webpack';
 import WXAppWebpackPlugin, { Targets } from 'wxapp-webpack-plugin';
 import StylelintPlugin from 'stylelint-webpack-plugin';
-import DashboardPlugin from 'webpack-dashboard/plugin';
 import MinifyPlugin from 'babel-minify-webpack-plugin';
 
 const { NODE_ENV, LINT } = process.env;
@@ -110,7 +109,6 @@ export default (env = {}) => {
 			}),
 			new optimize.ModuleConcatenationPlugin(),
 			new IgnorePlugin(/vertx/),
-			isDev && new DashboardPlugin(),
 			shouldLint && new StylelintPlugin(),
 			min && new MinifyPlugin()
 		].filter(Boolean),
