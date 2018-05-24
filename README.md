@@ -37,6 +37,25 @@
 
 开发者可以选择一套源代码来开发微信和支付宝小程序，这脚手架支持自动编译 `wxml` 为 `axml`，转换 `wx:attr` 为 `a:attr`，转换 API `wx` 为 `my`，反之亦然。但个别接口在平台上也略有差异，开发者可以通过 `__WECHAT__` 或 `__ALIPAY__` 来动态处理。
 
+## 文件复制
+
+如果 `wxml` 或 `axml` 有动态引入文件（如 `src="{{'images/' + type + '.png'}}"`），webpack 将不能动态引入，因此会导致打包后可能会存在缺失文件问题。
+
+遇到这种情况，可以通过 [copy-webpack-plugin](https://github.com/webpack-contrib/copy-webpack-plugin) 解决，把整个 `images` 目录复制到 `dist` 下即可。
+
+本脚手架已经内置这个插件。为了方便使用，还可以通过在 `package.json` 里增加一个 `copyWebpack` 的字符串数组，来实现目录或文件自动复制。例如：
+
+**package.json**
+
+```json
+{
+  // ...
+  "copyWebpack": ["images", "icons"]
+}
+```
+
+通过执行 `yarn start` 或 `yarn build`，`src/images` 和 `src/icons` 目录会自动复制到 `dist/wechat/images` 和 `dist/wechat/icons` 目录（支付宝小程序同理）。
+
 ## 更新日志
 
 [Changelog](/CHANGELOG.md)

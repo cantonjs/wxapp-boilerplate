@@ -8,11 +8,20 @@ import {
 import WXAppWebpackPlugin, { Targets } from 'wxapp-webpack-plugin';
 import StylelintPlugin from 'stylelint-webpack-plugin';
 import MinifyPlugin from 'babel-minify-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
+import pkg from './package.json';
 
 const { NODE_ENV, LINT } = process.env;
 const isDev = NODE_ENV !== 'production';
 const shouldLint = !!LINT && LINT !== 'false';
 const srcDir = resolve('src');
+
+const copyPatterns = []
+	.concat(pkg.copyWebpack || [])
+	.map(
+		pattern =>
+			typeof pattern === 'string' ? { from: pattern, to: pattern } : pattern
+	);
 
 const relativeFileLoader = (ext = '[ext]') => ({
 	loader: 'file-loader',
@@ -110,7 +119,8 @@ export default (env = {}) => {
 			new optimize.ModuleConcatenationPlugin(),
 			new IgnorePlugin(/vertx/),
 			shouldLint && new StylelintPlugin(),
-			min && new MinifyPlugin()
+			min && new MinifyPlugin(),
+			new CopyPlugin(copyPatterns, { context: resolve('src') })
 		].filter(Boolean),
 		devtool: isDev ? 'source-map' : false,
 		resolve: {
