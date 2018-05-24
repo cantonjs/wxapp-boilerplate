@@ -23,26 +23,33 @@ const copyPatterns = []
 			typeof pattern === 'string' ? { from: pattern, to: pattern } : pattern
 	);
 
-const relativeFileLoader = (ext = '[ext]') => ({
-	loader: 'file-loader',
-	options: {
-		useRelativePath: true,
-		name: `[name].${ext}`,
-		context: srcDir
-	}
-});
-
 export default (env = {}) => {
 	const min = env.min;
 	const target = env.target || 'Wechat';
 	const isWechat = env.target !== 'Alipay';
 	const isAlipay = !isWechat;
+
+	const relativeFileLoader = (ext = '[ext]') => {
+		const namePrefix = isWechat ? '' : '[path]';
+		return {
+			loader: 'file-loader',
+			options: {
+				useRelativePath: isWechat,
+				name: `${namePrefix}[name].${ext}`,
+				context: srcDir
+			}
+		};
+	};
+
 	return {
 		entry: {
 			app: [
-				`es6-promise/dist/es6-promise.auto${isDev ? '.min' : ''}.js`,
+				// add promise polyfill into wechat mini program
+				isWechat &&
+					`es6-promise/dist/es6-promise.auto${isDev ? '.min' : ''}.js`,
+
 				'./src/app.js'
-			]
+			].filter(Boolean)
 		},
 		output: {
 			filename: '[name].js',
@@ -69,32 +76,32 @@ export default (env = {}) => {
 					].filter(Boolean)
 				},
 				{
-					test: /\.scss$/,
+					test: /\.(scss|wxss|acss)$/,
 					include: /src/,
 					use: [
-						relativeFileLoader('wxss'),
+						relativeFileLoader(isWechat ? 'wxss' : 'acss'),
 						{
 							loader: 'sass-loader',
 							options: {
-								includePaths: [resolve('src', 'styles'), resolve('src')]
+								includePaths: [resolve('src', 'styles'), srcDir]
 							}
 						}
 					]
 				},
 				{
-					test: /\.(json|png|jpg|gif|wxss)$/,
+					test: /\.(json|png|jpg|gif)$/,
 					include: /src/,
 					use: relativeFileLoader()
 				},
 				{
-					test: /\.wxml$/,
-					include: resolve('src'),
+					test: /\.(wxml|axml)$/,
+					include: /src/,
 					use: [
 						relativeFileLoader(isWechat ? 'wxml' : 'axml'),
 						{
 							loader: 'wxml-loader',
 							options: {
-								root: resolve('src'),
+								root: srcDir,
 								enforceRelativePath: true
 							}
 						}
@@ -110,7 +117,8 @@ export default (env = {}) => {
 				__DEV__: isDev,
 				__WECHAT__: isWechat,
 				__ALIPAY__: isAlipay,
-				wx: isWechat ? 'wx' : 'my'
+				wx: isWechat ? 'wx' : 'my',
+				my: isWechat ? 'wx' : 'my'
 			}),
 			new WXAppWebpackPlugin({
 				clear: !isDev
@@ -119,7 +127,7 @@ export default (env = {}) => {
 			new IgnorePlugin(/vertx/),
 			shouldLint && new StylelintPlugin(),
 			min && new MinifyPlugin(),
-			new CopyPlugin(copyPatterns, { context: resolve('src') })
+			new CopyPlugin(copyPatterns, { context: srcDir })
 		].filter(Boolean),
 		devtool: isDev ? 'source-map' : false,
 		resolve: {

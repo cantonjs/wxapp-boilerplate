@@ -1,4 +1,3 @@
-
 import { resolve } from 'path';
 import { execSync } from 'child_process';
 import rimraf from 'rimraf';
@@ -12,7 +11,7 @@ beforeEach(clear);
 afterEach(clear);
 
 test('development', () => {
-	console.log(execSync('npm run webpack').toString());
+	console.log(execSync('yarn webpack').toString());
 	expect(exist('app.js')).toBe(true);
 	expect(exist('app.json')).toBe(true);
 	expect(exist('app.wxss')).toBe(true);
