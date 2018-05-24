@@ -7,24 +7,19 @@
 		"start": "webpack --watch",
 		"start:alipay": "webpack --watch --env.target=Alipay",
 		"webpack": "webpack",
-		"deprecate:watch":
-			"echo \"'watch' is deprecated, please use 'start' instead\"",
+		"deprecate:watch": "echo \"'watch' is deprecated, please use 'start' instead\"",
 		"watch": "run-s deprecate:watch start",
 		"watch:alipay": "run-s deprecate:watch start:alipay",
 		"prestart": "rimraf dist",
 		"prebuild": "rimraf dist",
-		"build:wechat":
-			"cross-env NODE_ENV=production webpack --env.target=Wechat --env.min",
-		"build:alipay":
-			"cross-env NODE_ENV=production webpack --env.target=Alipay --env.min",
+		"build:wechat": "cross-env NODE_ENV=production webpack --env.target=Wechat --env.min",
+		"build:alipay": "cross-env NODE_ENV=production webpack --env.target=Alipay --env.min",
 		"build": "run-s build:*",
 		"lint:watch": "cross-env LINT=true run-s start",
 		"lint:build": "cross-env LINT=true run-s build",
 		"prettier": "prettier-eslint --write \"+(src|test)/**/*.js\"",
-		"create-page":
-			"create-wxapp-page --type=page --dir=src --indent=tab --style=scss",
-		"create-component":
-			"create-wxapp-page --type=component --dir=src --indent=tab --style=scss",
+		"create-page": "create-wxapp-page --type=page --dir=src --indent=tab --style=scss",
+		"create-component": "create-wxapp-page --type=component --dir=src --indent=tab --style=scss",
 		"test": "jest"
 	},
 	"main": "dist/wechat/app.js",
@@ -35,7 +30,7 @@
 	},
 	"devDependencies": {
 		"babel-core": "^6.24.0",
-		"babel-jest": "^20.0.3",
+		"babel-jest": "21.x",
 		"babel-loader": "^7.1.1",
 		"babel-minify-webpack-plugin": "^0.3.0",
 		"babel-plugin-lodash": "^3.2.11",
@@ -58,7 +53,7 @@
 		"eslint-plugin-standard": "^3.1.0",
 		"file-loader": "1.1.11",
 		"glob": "^7.1.2",
-		"jest": "^20.0.4",
+		"jest": "21.x",
 		"node-sass": "^4.6.1",
 		"npm-run-all": "^4.1.1",
 		"prettier-eslint-cli": "^4.7.0",
@@ -78,6 +73,9 @@
 		"lodash": "^4.17.4"
 	},
 	"jest": {
-		"modulePathIgnorePatterns": ["node_modules", "lib"]
+		"modulePathIgnorePatterns": [
+			"node_modules",
+			"lib"
+		]
 	}
 }
