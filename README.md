@@ -47,7 +47,7 @@
 
 **package.json**
 
-```json
+```json5
 {
   // ...
   "copyWebpack": ["images", "icons"]
