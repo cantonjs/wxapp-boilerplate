@@ -1,9 +1,7 @@
-
 import { camelCase } from 'lodash';
 
 App({
 	onLaunch() {
-
 		console.log(camelCase('OnLaunch'));
 
 		// 调用API从本地缓存中获取数据
@@ -14,7 +12,8 @@ App({
 	getUserInfo(cb) {
 		if (this.globalData.userInfo) {
 			typeof cb === 'function' && cb(this.globalData.userInfo);
-		} else {
+		}
+		else {
 			// 调用登录接口
 			wx.login({
 				success: () => {

@@ -1,4 +1,3 @@
-
 import { formatTime } from '../../utils/util.js';
 
 Page({
@@ -11,5 +10,5 @@ Page({
 				return formatTime(new Date(log));
 			}),
 		});
-	}
+	},
 });
