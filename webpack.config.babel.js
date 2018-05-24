@@ -41,7 +41,6 @@ export default (env = {}) => {
 		entry: {
 			app: [
 				`es6-promise/dist/es6-promise.auto${isDev ? '.min' : ''}.js`,
-				'./src/utils/bomPolyfill.js',
 				'./src/app.js'
 			]
 		},
