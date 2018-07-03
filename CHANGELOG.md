@@ -1,5 +1,11 @@
 # Changelog
 
+## 2018-07-03
+
+* [UPGRADE][create-wxapp-page](https://github.com/cantonjs/create-wxapp-page) 更新至 `v2.0.8`
+* [UPGRADE][wxapp-webpack-plugin](https://github.com/Cap32/wxapp-webpack-plugin) 更新至 `v0.18.0`
+* [UPGRADE][wxml-loader](https://github.com/Cap32/wxml-loader) 更新至 `v0.2.2`
+
 ## 2018-05-24
 
 * [NEW] 内置 [copy-webpack-plugin](https://github.com/webpack-contrib/copy-webpack-plugin)

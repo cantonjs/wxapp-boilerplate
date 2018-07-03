@@ -2088,9 +2088,9 @@ create-hmac@^1.1.0, create-hmac@^1.1.2:
     create-hash "^1.1.0"
     inherits "^2.0.1"
 
-create-wxapp-page@^2.0.2:
-  version "2.0.2"
-  resolved "http://registry.npm.taobao.org/create-wxapp-page/download/create-wxapp-page-2.0.2.tgz#afdd3c290bb6d26637bcad52b4ed0078a2d40317"
+create-wxapp-page@^2.0.8:
+  version "2.0.8"
+  resolved "http://registry.npm.taobao.org/create-wxapp-page/download/create-wxapp-page-2.0.8.tgz#09af9cef1064305f9ca727c34d3734d92682bf62"
   dependencies:
     fs-extra "^4.0.3"
     inquirer "^3.0.6"
@@ -7341,18 +7341,18 @@ write@^0.2.1:
   dependencies:
     mkdirp "^0.5.1"
 
-wxapp-webpack-plugin@^0.17.1:
-  version "0.17.1"
-  resolved "http://registry.npm.taobao.org/wxapp-webpack-plugin/download/wxapp-webpack-plugin-0.17.1.tgz#52d244b8046acd5f8bfbfa4a743ac7dee31dfcd9"
+wxapp-webpack-plugin@^0.18.0:
+  version "0.18.0"
+  resolved "http://registry.npm.taobao.org/wxapp-webpack-plugin/download/wxapp-webpack-plugin-0.18.0.tgz#1cb2a4a697f081e59c2210321b3fe84d929ea302"
   dependencies:
     fs-extra "^3.0.1"
     globby "^6.1.0"
     lodash "^4.17.4"
     webpack-sources "^0.2.3"
 
-wxml-loader@^0.2.1:
-  version "0.2.1"
-  resolved "http://registry.npm.taobao.org/wxml-loader/download/wxml-loader-0.2.1.tgz#25a0b5cafdc348e730c8d7d8ea5582591f431c9b"
+wxml-loader@^0.2.2:
+  version "0.2.2"
+  resolved "http://registry.npm.taobao.org/wxml-loader/download/wxml-loader-0.2.2.tgz#524e690603b634b46fcd5337b334e0aecfce98a2"
   dependencies:
     html-minifier "^3.5.6"
     loader-utils "^1.1.0"

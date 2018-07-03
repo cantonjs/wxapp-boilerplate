@@ -38,7 +38,7 @@
 		"babel-preset-es2015": "^6.24.0",
 		"babel-preset-stage-0": "^6.22.0",
 		"copy-webpack-plugin": "^4.5.1",
-		"create-wxapp-page": "^2.0.2",
+		"create-wxapp-page": "^2.0.8",
 		"cross-env": "^5.0.1",
 		"eslint": "^4.19.1",
 		"eslint-config-cantonjs": "^1.0.0",
@@ -64,8 +64,8 @@
 		"stylelint-scss": "^1.4.4",
 		"stylelint-webpack-plugin": "^0.9.0",
 		"webpack": "^3.8.1",
-		"wxapp-webpack-plugin": "^0.17.1",
-		"wxml-loader": "^0.2.1"
+		"wxapp-webpack-plugin": "^0.18.0",
+		"wxml-loader": "^0.2.2"
 	},
 	"dependencies": {
 		"babel-runtime": "^6.23.0",
