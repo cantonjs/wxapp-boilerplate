@@ -1,5 +1,9 @@
 # Changelog
 
+## 2018-09-22
+
+* [UPGRADE][wxapp-webpack-plugin](https://github.com/Cap32/wxapp-webpack-plugin) 更新至 `v0.19.0`，支持分包 `subPackages`
+
 ## 2018-07-03
 
 * [UPGRADE][create-wxapp-page](https://github.com/cantonjs/create-wxapp-page) 更新至 `v2.0.8`
