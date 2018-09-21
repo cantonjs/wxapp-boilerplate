@@ -7341,9 +7341,9 @@ write@^0.2.1:
   dependencies:
     mkdirp "^0.5.1"
 
-wxapp-webpack-plugin@^0.18.0:
-  version "0.18.0"
-  resolved "http://registry.npm.taobao.org/wxapp-webpack-plugin/download/wxapp-webpack-plugin-0.18.0.tgz#1cb2a4a697f081e59c2210321b3fe84d929ea302"
+wxapp-webpack-plugin@^0.19.0:
+  version "0.19.0"
+  resolved "http://registry.npm.taobao.org/wxapp-webpack-plugin/download/wxapp-webpack-plugin-0.19.0.tgz#2bfcf5bb1aec3cbc5d6266462b264fa34f89f3be"
   dependencies:
     fs-extra "^3.0.1"
     globby "^6.1.0"
