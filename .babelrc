@@ -1,15 +1,21 @@
 {
-	"presets": [
-		["es2015", {
-			"loose": true,
-		}],
-		"stage-0",
-	],
-	"plugins": [
-		["transform-runtime", {
-			"polyfill": true,
-			"regenerator": true,
-		}],
-		"lodash",
-	]
+  "presets": [
+    [
+      "es2015",
+      {
+        "loose": true
+      }
+    ],
+    "stage-0"
+  ],
+  "plugins": [
+    [
+      "transform-runtime",
+      {
+        "polyfill": false,
+        "regenerator": true
+      }
+    ],
+    "lodash"
+  ]
 }

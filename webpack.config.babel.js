@@ -43,13 +43,7 @@ export default (env = {}) => {
 
 	return {
 		entry: {
-			app: [
-				// add promise polyfill into wechat mini program
-				isWechat &&
-					`es6-promise/dist/es6-promise.auto${isDev ? '.min' : ''}.js`,
-
-				'./src/app.js',
-			].filter(Boolean),
+			app: './src/app.js',
 		},
 		output: {
 			filename: '[name].js',
