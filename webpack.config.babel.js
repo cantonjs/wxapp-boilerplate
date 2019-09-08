@@ -74,13 +74,16 @@ export default (env = {}) => {
 					include: /src/,
 					use: [
 						relativeFileLoader(isWechat ? 'wxss' : 'acss'),
+						min && {
+							loader: 'uglifycss-loader',
+						},
 						{
 							loader: 'sass-loader',
 							options: {
 								includePaths: [resolve('src', 'styles'), srcDir],
 							},
 						},
-					],
+					].filter(Boolean),
 				},
 				{
 					test: /\.(json|png|jpg|gif)$/,
@@ -92,6 +95,17 @@ export default (env = {}) => {
 					include: /src/,
 					use: [
 						relativeFileLoader(isWechat ? 'wxml' : 'axml'),
+						min && {
+							loader: 'html-minifier-loader',
+							options: {
+								removeComments: true,
+								collapseWhitespace: true,
+								conservativeCollapse: false,
+								preserveLineBreaks: false,
+								keepClosingSlash: true,
+								ignoreCustomFragments: [/<input[\s\S]*?input>/, /<button[\s\S]*?button>/, /<span[\s\S]*?span>/]
+							}
+						},
 						{
 							loader: 'wxml-loader',
 							options: {
@@ -99,7 +113,7 @@ export default (env = {}) => {
 								enforceRelativePath: true,
 							},
 						},
-					],
+					].filter(Boolean),
 				},
 			],
 		},

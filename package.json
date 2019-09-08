@@ -53,6 +53,7 @@
 		"eslint-plugin-standard": "^3.1.0",
 		"file-loader": "1.1.11",
 		"glob": "^7.1.2",
+		"html-minifier-loader": "^1.4.1",
 		"jest": "21.x",
 		"node-sass": "^4.6.1",
 		"npm-run-all": "^4.1.1",
@@ -63,6 +64,7 @@
 		"stylelint-config-standard": "^17.0.0",
 		"stylelint-scss": "^1.4.4",
 		"stylelint-webpack-plugin": "^0.9.0",
+		"uglifycss-loader": "^1.0.2",
 		"webpack": "^3.8.1",
 		"wxapp-webpack-plugin": "^0.19.0",
 		"wxml-loader": "^0.2.2"
