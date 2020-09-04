@@ -54,7 +54,7 @@
 		"file-loader": "1.1.11",
 		"glob": "^7.1.2",
 		"jest": "21.x",
-		"node-sass": "^4.6.1",
+		"node-sass": "^4.13.1",
 		"npm-run-all": "^4.1.1",
 		"prettier-eslint-cli": "^4.7.0",
 		"rimraf": "^2.6.1",
